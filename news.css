@@ -1,0 +1,131 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 2000px;
+    width: 100%;
+}
+.main1{
+    height: 300px;
+    width: 400px;
+    background-image: url(images/pollard);
+    background-size: cover;
+    border: 1px solid #d8dadd;
+    border-radius: 10px;
+    box-shadow: 15px 15px 18px #D2D5D9;
+}
+.main2{
+    height: 300ox;
+    width: 600px;
+    border: 1px solid #d8dadd;
+    border-radius: 10px;
+    box-shadow: 15px 15px 18px #D2D5D9;
+}
+.main2 p{
+    color: grey;
+    font-size: 1.1rem;
+}
+.mains{
+    display: flex;
+    margin-left: 100px;
+    column-gap: 120px;
+    cursor: pointer;
+}
+.main2 h3{
+    margin-left: 19px;
+}
+.main2 h1{
+    margin-left: 19px;
+}
+.main2 p{
+    margin-left: 19px;
+}
+.main2 h6{
+    margin-left: 19px;
+    font-size: 1.1rem;
+}
+.mainsa{
+    display: flex;
+    column-gap: 120px;
+    margin-left: 100px;
+    margin-top: 80px;
+    cursor: pointer;
+}
+.mains1{
+    height: 300px;
+    width: 400px;
+    background-image: url(images/root);
+    background-size: cover;
+    border: 1px solid #d8dadd;
+    border-radius: 10px;
+    box-shadow: 15px 15px 18px #D2D5D9;
+}
+.mains2{
+    height: 300ox;
+    width: 600px;
+    border: 1px solid #d8dadd;
+    border-radius: 10px;
+    box-shadow: 15px 15px 18px #D2D5D9;
+}
+.mains2 p{
+    color: grey;
+    font-size: 1.1rem;
+}
+.mains2 h3{
+    margin-left: 19px;
+}
+.mains2 h1{
+    margin-left: 19px;
+}
+.mains2 p{
+    margin-left: 19px;
+}
+.mains2 h6{
+    margin-left: 19px;
+    font-size: 1.1rem;
+}
+.full{
+    height: 1000px;
+    width: 1200px;
+    background-color: white ;
+}
+.mainsb{
+    display: flex;
+    column-gap: 120px;
+    margin-left: 100px;
+    margin-top: 80px;
+    cursor: pointer;
+}
+.mainsb1{
+    height: 300px;
+    width: 400px;
+    background-image: url(images/both);
+    background-size: cover;
+    border: 1px solid #d8dadd;
+    border-radius: 10px;
+    box-shadow: 15px 15px 18px #D2D5D9;
+}
+.mainsb2{
+    height: 300ox;
+    width: 600px;
+    border: 1px solid #d8dadd;
+    border-radius: 10px;
+    box-shadow: 15px 15px 18px #D2D5D9;
+}
+.mainsb2 p{
+    color: grey;
+    font-size: 1.1rem;
+}
+.mainsb2 h3{
+    margin-left: 19px;
+}
+.mainsb2 h1{
+    margin-left: 19px;
+}
+.mainsb2 p{
+    margin-left: 19px;
+}
+.mainsb2 h6{
+    margin-left: 19px;
+    font-size: 1.1rem;
+}
