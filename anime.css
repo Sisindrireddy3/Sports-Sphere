@@ -1,0 +1,46 @@
+/* Container styling */
+.container {
+    display: flex;
+    justify-content: center;
+    column-gap: 200px;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+  }
+  
+  /* Common styles for both boxes */
+  .box {
+    width: 100px;
+    height: 100px;
+    background-color: #3498db; /* Blue color for the boxes */
+    position: relative; /* For animation */
+  }
+  
+  /* Initial positions */
+  .left-box {
+    animation: moveFromLeft 2s ease-in-out 1 forwards; /* Animation for the left box */
+  }
+  
+  .right-box {
+    animation: moveFromRight 2s ease-in-out 1 forwards; /* Animation for the right box */
+  }
+  
+  /* Keyframes for left box */
+  @keyframes moveFromLeft {
+    0% {
+      transform: translateX(-900px); /* Move the box 300px to the left of its original position */
+    }
+    100% {
+      transform: translateX(0); /* Move the box to its original position */
+    }
+  }
+  
+  /* Keyframes for right box */
+  @keyframes moveFromRight {
+    0% {
+      transform: translateX(300px); /* Move the box 300px to the right of its original position */
+    }
+    100% {
+      transform: translateX(0); /* Move the box to its original position */
+    }
+  }
+  
