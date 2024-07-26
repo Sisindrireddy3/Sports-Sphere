@@ -1,0 +1,62 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    height: 1000px;
+    
+}
+.india{
+    height: 770px;
+    width: 700px;
+    border: 8px solid;
+    margin-left: 400px;
+    margin-top: 100px;
+    border-radius: 30px;
+}
+.players{
+    text-align: center;
+    margin-top: 50px;
+    font-size: 2rem;
+}
+#text{
+    background: linear-gradient(to left, orange,white,green, white);
+    background-clip: text;
+    display: inline;
+    color: transparent;
+    animation: animated 5s linear infinite;
+  }
+  @keyframes animated{
+    to{
+        background-position-x: 161px;
+    }
+  }
+  .one{
+    display: flex;
+    column-gap: 50px;
+    margin-left: 20px;
+    margin-top: 30px;
+  }
+  .rohit{
+    height: 70px;
+    width: 300px;
+    border: 1.5px solid;
+    border-radius: 20px;
+  
+  }
+
+
+  .virat{
+    height: 70px;
+    width: 300px;
+    border: 1.5px solid;
+    border-radius: 20px;
+  }
+.son{
+    margin-left: 100px;
+    margin-top: -50px;
+}
