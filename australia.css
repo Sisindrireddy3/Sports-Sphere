@@ -60,3 +60,19 @@ body{
     margin-left: 100px;
     margin-top: -50px;
 }
+.info{
+  height: 600px;
+  width: 1200px;
+  border: 2px solid;
+  margin-left: 100px;
+  margin-top: 150px;
+  border-radius: 20px;
+}
+.info p{
+  margin-left: 300px;
+  margin-top: -280px;
+  font-size: 1.2rem;
+}
+.info h1{
+  margin-left: 37px;
+}
