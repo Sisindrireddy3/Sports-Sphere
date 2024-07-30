@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fantasy Sports League</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 2000px;
+}
+header {
+    background-color: #343a40;
+    color: white;
+    padding: 1em;
+    text-align: center;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2em;
+}
+
+section {
+    background-color: white;
+    border: 1px solid #dee2e6;
+    border-radius: 5px;
+    padding: 2em;
+    margin-bottom: 2em;
+    width: 300px;
+}
+
+h2 {
+    margin-top: 0;
+    color: #343a40;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label, input {
+    margin-bottom: 1em;
+}
+
+input[type="text"] {
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+button:hover {
+    background-color: #0056b3;
+}
+
+#leagues-list ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#leagues-list li {
+    padding: 0.5em;
+    border-bottom: 1px solid #ccc;
+}
+
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Fantasy Sports League</h1>
+    </header>
+    <main>
+        <section id="create-league">
+            <h2>Create a League</h2>
+            <form id="create-league-form">
+                <label for="league-name">League Name:</label>
+                <input type="text" id="league-name" name="leagueName" required>
+                <button type="submit">Create League</button>
+            </form>
+            <div id="create-message"></div>
+        </section>
+        <section id="join-league">
+            <h2>Join a League</h2>
+            <form id="join-league-form">
+                <label for="league-code">League Code:</label>
+                <input type="text" id="league-code" name="leagueCode" required>
+                <button type="submit">Join League</button>
+            </form>
+            <div id="join-message"></div>
+        </section>
+        <section id="leagues-list">
+            <h2>Available Leagues</h2>
+            <ul id="league-list"></ul>
+        </section>
+    </main>
+    <div style="margin-left: 100px;" class="prizes">
+       <center> <h1 style="font-size: 4rem;">Prizes</h1></center>
+        <h2 style="font-size: 2rem;">Overall Prizes</h2>
+        <h2 style="font-size: 2rem;">1st Prize-2024/25 Fantasy Premier Leauge Champion </h2>
+        <div style="font-size: 1.3rem;" class="list1">
+        <li>7-night break in the UK inclusive of two VIP hospitality at two 2025/26 Premier League matches</li>
+        <li>A selection of experiences at popular UK tourist attractions</li>
+        <li>Includes travel and 7 nights’ accommodation</li>
+        <li>Laptop computer OR SIM-free smartphone</li>
+        <li>Noise-cancelling headphones (in-ear OR on-ear)</li>
+        <li>Personalised FPL bundle consisting of a rucksack, T-shirt, mug, thermal bottle, stress ball, pen, pad and key ring</li>
+    </div>
+    </div>
+    <div style="margin-left: 100px; margin-top: 100px;" class="runners">
+        <h2 style="font-size: 2rem;">Runner-up</h2>
+        <div style="font-size: 1.3rem;" class="list2">
+        <li>Two hospitality tickets at one 2025/26 Premier League match</li>
+        <li>Includes travel and 3 nights’ accommodation</li>
+        <li>Official Premier League Club T-shirt</li>
+        <li>EA SPORTS FC™ game</li>
+        <li>Laptop computer OR SIM-free smartphone</li>
+        <li>Noise-cancelling headphones (in-ear OR on-ear)</li>
+        <li>FPL bundle consisting of a rucksack, T-shirt, mug, thermal bottle, stress ball, pen, pad and key ring</li>
+    </div>
+    </div>
+    <div style="margin-left: 100px; margin-top: 100px;" class="3rdprize">
+        <h2 style="font-size: 2rem;">3rd Prize</h2>
+        <div style="font-size: 1.3rem;" class="list3">
+        <li>Two hospitality tickets at one 2025/26 Premier League match</li>
+        <li>Includes travel and 3 nights’ accommodation</li>
+        <li>Official Premier League Club T-shirt</li>
+        <li>EA SPORTS FC™ game</li>
+        <li>Tablet computer</li>
+        <li>FPL bundle consisting of a rucksack, T-shirt, mug, thermal bottle, stress ball, pen, pad and key ring</li>
+        </div>
+    </div>
+   
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    const leagues = [];
+    
+    
+    document.getElementById('create-league-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const leagueName = document.getElementById('league-name').value;
+        const leagueCode = Math.random().toString(36).substr(2, 8);
+        
+        leagues.push({ name: leagueName, code: leagueCode });
+        document.getElementById('create-message').innerText = `League "${leagueName}" created with code: ${leagueCode}`;
+        updateLeagueList();
+    });
+
+    
+    document.getElementById('join-league-form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        const leagueCode = document.getElementById('league-code').value;
+        const league = leagues.find(l => l.code === leagueCode);
+        
+        if (league) {
+            document.getElementById('join-message').innerText = `Joined league: ${league.name}`;
+        } else {
+            document.getElementById('join-message').innerText = 'Invalid league code';
+        }
+    });
+
+
+    function updateLeagueList() {
+        const leagueList = document.getElementById('league-list');
+        leagueList.innerHTML = '';
+        leagues.forEach(league => {
+            const li = document.createElement('li');
+            li.textContent = `${league.name} (Code: ${league.code})`;
+            leagueList.appendChild(li);
+        });
+    }
+});
+
+    </script>
+</body>
+</html>
